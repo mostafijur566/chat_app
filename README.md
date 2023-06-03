@@ -1,16 +1,19 @@
-# chat_app
+# Chat App
 
-A new Flutter project.
+This project is a real-time one-to-one chat application built using Flutter and Django. It leverages websockets to facilitate real-time communication between users.
+## Features
+### Real-time one-to-one chat
 
-## Getting Started
+Exchange messages instantly with the other user.
+## Auto-scrolling to newest message
 
-This project is a starting point for a Flutter application.
+When a new message arrives, the chatbox automatically scrolls to the bottom to show the latest message.
+## Dynamic message box
 
-A few resources to get you started if this is your first Flutter project:
+The message box can dynamically grow in size, up to six lines, as the user types a longer message.
+## Robust and efficient backend
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The Django server provides a stable and efficient backend support for the application.
+## How it Works
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The application makes use of the web_socket_channel package to establish a websocket connection with the Django server. Messages are sent and received in JSON format, with details including the message content, and the sender and receiver information.
